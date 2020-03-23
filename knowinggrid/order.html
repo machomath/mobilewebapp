@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+      .container{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .water2{
+        /*grid-column: 3/6;*/
+        grid-column: span 3;
+        background: skyblue;
+      }
+      .pestcontrol{
+        order: 1;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="water1">
+        <p>I am water1</p>
+      </div>
+      <div class="pestcontrol">
+        <p>I am pest control</p>
+      </div>
+      <div class="water2">
+        <p>I am water 2</p>
+      </div>
+
+    </div>
+
+  </body>
+</html>

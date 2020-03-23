@@ -1,0 +1,123 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+nav{
+  background: rgb(219,112,147);
+  /* height: 25px; */
+  /* height: 3em; */
+  /* height: 4vw; */
+  font-size: 0;
+  position: sticky;
+  /* position: fixed; */
+  top: 0;
+  z-index: 5;
+}
+
+nav a{
+  text-decoration: none;
+  font-size: 3vw;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.main-img-container{
+  position: relative;
+  font-size: 0;
+}
+
+.main-img-container h1{
+  position: absolute;
+  bottom: 4vw;
+  left: 1vw;
+}
+
+.main-img-container .arrow-button{
+  position: absolute;
+  width: 5vw;
+  font-size: 3vw;
+  border: none;
+}
+
+.main-img-container .left-button{
+  bottom: calc(50% - 5vw);
+  height: 10vw;
+  left: 5px;
+  border-top-right-radius: 100% 50%;
+  border-bottom-right-radius: 100% 50%;
+
+}
+
+.main-img-container .arrow-button:active{
+  background: blue;
+}
+
+.main-img-container .right-button{
+  right: 5px;
+  width: 10vw;
+  top: 5px;
+  bottom: 5px;
+  border-bottom-right-radius: 20px;
+  background: linear-gradient(to right, rgba(255, 255, 0, 0.2) , rgba(255, 255, 0, 0.6));
+}
+.main-img-container .right-button:hover{
+  background: linear-gradient(to right, rgba(255, 255, 0, 0.4) , rgba(255, 255, 0, 0.8));
+}
+
+.main-img-container .right-button:active{
+  background: linear-gradient(to right, rgba(255, 255, 0, 0.5) , rgba(255, 255, 0, 1.0));
+}
+
+.main-img{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid rgb(219,112,147);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 25px;
+}
+
+.round-img{
+  width: 50%;
+  border-radius: 50%;
+  background: pink;
+  position: sticky;
+  top: 3vw;
+}
+
+.special-img{
+  width: 50%;
+  border-top-left-radius: 10vw 20vw;
+}
+
+.txt-img{
+  width: 20%;
+  float: left;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+.txt-img.right-img{
+  float: right;
+}
+
+.clear-both{
+    clear: both;
+}
+
+
+
+#top-heading{
+  color: blue;
+  text-align: center;
+  font-size: 4em;
+  /* padding: 2em; */
+  border: 1px solid rgb(255,20,147);
+  /* margin: 1em; */
+  margin: 0;
+}

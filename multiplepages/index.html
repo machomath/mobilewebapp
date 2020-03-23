@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MultiPages</title>
+    <style media="screen">
+      a{
+        background: yellow;
+        text-decoration: none;
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+    <link rel="stylesheet" href="master.css">
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" style="background: skyblue;">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contacts.html">Contact Us</a>
+      <a href="service.html">Our Services</a>
+    </nav>
+
+    <h1 id="top-heading">Home Page</h1>
+    <p style="background: pink;">
+      Currently we lave pasted the copies of nav at every page which is ok for now but very bad practice.
+      Why? Because it is very difficult to maintain. The good practice is to put it at one place and use
+      it from there.
+    </p>
+    <p style="background: yellow;">Probably this is a good time to jump into css. css is for styling </p>
+    <p>
+      We can use css in three ways.
+    </p>
+    <dl class="">
+      <dt>Inline css</dt>
+      <dd>
+        Inline css is used within the tag, it is most prioritized for that tag but not
+        applicable for any other MultiPages. Normally we dont use it.The first para is styled like this.
+      </dd>
+      <dt class="red-yellow">In File CSS</dt>
+      <dd>
+        In this method we define our style in the same file head within the tag "style". We cannont style multple
+        pages by this method.
+      </dd>
+      <dt>CSS in a serarate file</dt>
+      <dd>
+        This is the best way do style.
+      </dd>
+    </dl>
+
+    <p class="red-yellow"><b>Note: </b>
+      <i>Mainly there are two kind of html elements: Block Type and Inline. Block type element
+        take the entire width of the screen, while inline elements take the width of their contants.
+        If we want to check whether
+      an element is block type or inline, just look into the manual, kidding, easy way is to give it a
+      backgroung color.
+    </i>
+    </p>
+    <ul>
+      <li>First
+        <ol>
+          <li>Inner List item first</li>
+          <li>Inner List item second</li>
+        </ol>
+      </li>
+      <a href="#"><li>Second</li></a>
+      <li>Third</li>
+      <li>Fourth</li>
+      <li>Fifth</li>
+      <li>Sixth</li>
+    </ul>
+
+    <ol class="this-one">
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+      <li>Fourth</li>
+      <li>Fifth</li>
+      <li>Sixth</li>
+    </ol>
+
+
+  </body>
+</html>

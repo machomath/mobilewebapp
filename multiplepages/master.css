@@ -1,0 +1,33 @@
+a{
+  background: lightgreen !important;
+}
+/* Whatever on the rightmost of the selector is gong to take the style */
+ul li{
+  font-style: italic;
+  list-style-type: square;
+}
+
+ul ol li{
+  list-style-type: lower-alpha;
+}
+
+
+.red-yellow{
+  color: red;
+  background: yellow;
+  /* display: inline; */
+}
+
+#top-heading{
+  color: blue;
+  text-align: center;
+  font-size: 4em;
+}
+
+/* ol.this-one li --- means style li which is sitting in ol decorated with class this-one */
+/* whereas */
+/* ol .this-one li --- means style li which is sitting in an element decorated by this-one, which is sitting in ol*/
+/* Note the difference of space */
+ol.this-one li:nth-of-type(2n+1){
+  color: pink;
+}

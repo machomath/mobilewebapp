@@ -1,0 +1,26 @@
+html{
+  box-sizing: border-box;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);/*1fr 1fr 1fr;*/
+  grid-template-rows: repeat(3, auto);
+  width: 100%;
+  border: 1px solid grey;
+  padding: 5px;
+}
+
+.main-img{
+  grid-column: 1/10;
+  grid-row: 1/4;
+}
+
+
+.main-img img{
+  width: 100%;
+}

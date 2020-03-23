@@ -1,0 +1,38 @@
+body{
+  padding: 1vw;
+  background: #F0F0F0;
+}
+
+nav{
+  background: pink;
+  height: 10vw;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  padding-left: 3vw;
+}
+
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item{
+  padding: 1vw;
+  margin: 1vw;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 20%;
+  background: white;
+}
+
+.item img{
+  width: 100%;
+}
