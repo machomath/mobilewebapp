@@ -20,16 +20,7 @@
     var endMainImgSrc = mainImgSrc.slice(-4);
     midMainImgSrc = ((midMainImgSrc - 0) + flipDirection + numberOfImages)%numberOfImages;
     mainImgSrc = initMainImgSrc + midMainImgSrc + endMainImgSrc;
-
-    if(flipDirection !== 0){
-      mainImg.style.opacity = "0";
-    }
-    mainImg.addEventListener("transitionend", function actualFlip() {
-      mainImg.removeEventListener("transitionend", actualFlip);
-      mainImg.src = mainImgSrc;
-      mainImg.style.opacity = "1.0";
-    });
-
+    mainImg.src = mainImgSrc;
   };
 
 
