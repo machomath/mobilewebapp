@@ -18,6 +18,25 @@ html{
 
 .img-container img{
   width: 100%;
+  transition: left 1s;
+}
+
+.only-images{
+  position: relative;
+}
+
+.dummy-img{
+  opacity: 0;
+}
+
+.my-main-img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.show-this-img{
+  z-index: 10;
 }
 
 .button{
@@ -26,6 +45,7 @@ html{
   height: 10vw;
   position: absolute;
   bottom: calc(50% - 5vw);
+  z-index: 20;
 }
 
 .left-button{
