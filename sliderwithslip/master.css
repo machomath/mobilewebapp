@@ -14,11 +14,12 @@ html{
 
 .img-container{
   position: relative;
+  overflow: hidden;
 }
 
 .img-container img{
   width: 100%;
-  transition: left 1s;
+  transition: left 0.5s;
 }
 
 .only-images{
@@ -35,9 +36,6 @@ html{
   left: 0;
 }
 
-.show-this-img{
-  z-index: 10;
-}
 
 .button{
   display: inline-block;

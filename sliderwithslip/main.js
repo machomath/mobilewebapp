@@ -6,8 +6,9 @@
   var buttons = document.querySelectorAll(".button");
   var autoFlip;
   var currentImgIndex = 1;
+  mainImgs[currentImgIndex].style.zIndex = "10";
   console.log(mainImgs[currentImgIndex]);
- 
+
   buttons[1].addEventListener("click", function () {
     flipImg(1);
   });//right button
@@ -25,8 +26,17 @@
         mainImgs[(currentImgIndex + 1*flipDirection + 3)%3].style.zIndex = "10";
         mainImgs[currentImgIndex].style.zIndex = "0";
         mainImgs[currentImgIndex].style.left = "0";
+        //////////////////
+        var currentImgSrc = mainImgs[currentImgIndex].src;
+        var initCurrentImgSrc = currentImgSrc.slice(0, -5);
+        var midCurrentImgSrc = currentImgSrc.slice(-5, -4);
+        var endCurrentImgSrc = currentImgSrc.slice(-4);
+        midCurrentImgSrc = (midCurrentImgSrc - 0 + flipDirection*2 + numberOfImages)%numberOfImages;
+        currentImgSrc = initCurrentImgSrc + midCurrentImgSrc +endCurrentImgSrc;
+        mainImgs[(currentImgIndex -flipDirection + 3)%3].src = currentImgSrc;
+        /////////////////
+        currentImgIndex = (currentImgIndex + 1*flipDirection + 3)%3;
       });
-      currentImgIndex = (currentImgIndex + 1*flipDirection + 3)%3;
     }
   };
 
@@ -59,10 +69,10 @@
 
 })();
 
-var mainImgSrc = mainImg.src;
-var initMainImgSrc = mainImgSrc.slice(0, -5);
-var midMainImgSrc = mainImgSrc.slice(-5, -4);
-var endMainImgSrc = mainImgSrc.slice(-4);
-midMainImgSrc = ((midMainImgSrc - 0) + flipDirection + numberOfImages)%numberOfImages;
-mainImgSrc = initMainImgSrc + midMainImgSrc + endMainImgSrc;
-mainImg.src = mainImgSrc;
+// var mainImgSrc = mainImg.src;
+// var initMainImgSrc = mainImgSrc.slice(0, -5);
+// var midMainImgSrc = mainImgSrc.slice(-5, -4);
+// var endMainImgSrc = mainImgSrc.slice(-4);
+// midMainImgSrc = ((midMainImgSrc - 0) + flipDirection + numberOfImages)%numberOfImages;
+// mainImgSrc = initMainImgSrc + midMainImgSrc + endMainImgSrc;
+// mainImg.src = mainImgSrc;
