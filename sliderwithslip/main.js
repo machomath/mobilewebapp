@@ -7,7 +7,7 @@
   var autoFlip;
   var currentImgIndex = 1;
   console.log(mainImgs[currentImgIndex]);
-
+ 
   buttons[1].addEventListener("click", function () {
     flipImg(1);
   });//right button
