@@ -1,0 +1,29 @@
+html{
+  box-sizing: border-box;
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+nav{
+  background: pink;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 4vw;
+}
+nav a{
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vw;
+  font-weight: bold;
+  padding-left: 2vw;
+  color: white;
+}
+nav a:last-of-type{
+  padding-right: 3vw;
+}
+
+.this-page{
+  color: brown;
+}
