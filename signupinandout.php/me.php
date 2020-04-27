@@ -1,4 +1,5 @@
 <?php
+require_once './includes/inc.php';
 if(isset($_POST["signup"], $_POST["name"], $_POST["email"], $_POST["password"])
     && is_string($_POST["name"])
     && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)
@@ -7,7 +8,9 @@ if(isset($_POST["signup"], $_POST["name"], $_POST["email"], $_POST["password"])
     $name = filter_var(trim($_POST["name"]), FILTER_SANITIZE_STRING);
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $password = password_hash(trim($_POST["password"]), PASSWORD_DEFAULT);
-    
+    $sql = "INSERT INTO users (name, email, password) VALUES ('" . $name . "', '" . $email . "', '" . $password . "');";
+    //echo $sql;
+    $db->exec($sql);  
 }
 ?>
 <!DOCTYPE html>
