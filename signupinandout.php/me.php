@@ -10,7 +10,8 @@ if(isset($_POST["signup"], $_POST["name"], $_POST["email"], $_POST["password"])
     $password = password_hash(trim($_POST["password"]), PASSWORD_DEFAULT);
     $sql = "INSERT INTO users (name, email, password) VALUES ('" . $name . "', '" . $email . "', '" . $password . "');";
     //echo $sql;
-    $db->exec($sql);  
+    $db->exec($sql);
+    //just for practice 
 }
 ?>
 <!DOCTYPE html>
