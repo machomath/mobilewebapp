@@ -11,7 +11,8 @@ if(isset($_POST["signup"], $_POST["name"], $_POST["email"], $_POST["password"])
     $sql = "INSERT INTO users (name, email, password) VALUES ('" . $name . "', '" . $email . "', '" . $password . "');";
     //echo $sql;
     $db->exec($sql);
-    //just for practice 
+    //just for practice
+    //This change was made by Dr. Zeb 
 }
 ?>
 <!DOCTYPE html>
@@ -27,6 +28,5 @@ if(isset($_POST["signup"], $_POST["name"], $_POST["email"], $_POST["password"])
       <input type="password" name="password" placeholder="Password (Must not be Empty or all spaces)" required>
       <button type="submit" name="signup">Signup</button>
     </form>
-
   </body>
 </html>
