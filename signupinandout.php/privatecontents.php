@@ -1,6 +1,6 @@
 <?php
 require_once './includes/inc.php';
-if((isset($_SESSION["is_signed_in"]) && $_SESSION["is_signed_in"] == true)){
+if(!(isset($_SESSION["is_signed_in"]) && $_SESSION["is_signed_in"] == true)){
   header("Location: me.php");
 }//!
 ?>
